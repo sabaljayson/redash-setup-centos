@@ -83,7 +83,7 @@ extract_redash_sources() {
 }
 
 install_python_packages() {
-    pip install --upgrade pip
+    sudo pip install --upgrade --force-reinstall pip==9.0.3
     pip install setproctitle # setproctitle is used by Celery for "pretty" process titles
     pip install -r $REDASH_BASE_PATH/current/requirements.txt
     pip install -r $REDASH_BASE_PATH/current/requirements_all_ds.txt
